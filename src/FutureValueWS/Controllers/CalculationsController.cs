@@ -11,10 +11,11 @@ namespace FutureValue.Controllers
     {
         // GET: api/values
         [HttpGet]
-        public double CalculateFutureValue(double principal,double rate, double years, double compounds)
+        public double CalculateFutureValue(double principal, double rate, double years, double compounds)
         {
+            var calculations = new Calculations();
             //http://localhost:64389/api/calculations/?principal=5000&rate=0.05&years=10&compounds=12
-            return Math.Round(principal*Math.Pow((1+rate/compounds),years*compounds),2);
-        }        
+            return calculations.CalculateCompoundInterest(principal, rate, years, compounds);
+        }
     }
 }

@@ -10,12 +10,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "FutureValue", "src\FutureValue\FutureValue.xproj", "{A1B7806D-E68A-49BD-9411-4CE61DE5D043}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "FutureValueWS", "src\FutureValueWS\FutureValueWS.xproj", "{A1B7806D-E68A-49BD-9411-4CE61DE5D043}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{771224B2-EF54-4299-84BE-960943E8B22F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{1C81C01A-DFDC-40F5-87B4-9DC18178D81C}"
 	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Scripts\Deploy-AzureResourceGroup-2.ps1 = PublishScripts\Scripts\Deploy-AzureResourceGroup-2.ps1
 		PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1 = PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1
 	EndProjectSection
 EndProject
@@ -23,7 +24,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{
 	ProjectSection(SolutionItems) = preProject
 		PublishScripts\Templates\FutureValue.json = PublishScripts\Templates\FutureValue.json
 		PublishScripts\Templates\FutureValue.param.dev.json = PublishScripts\Templates\FutureValue.param.dev.json
+		PublishScripts\Templates\FutureValueFE.json = PublishScripts\Templates\FutureValueFE.json
+		PublishScripts\Templates\FutureValueFE.param.dev.json = PublishScripts\Templates\FutureValueFE.param.dev.json
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FutureValueTests", "src\FutureValueTests\FutureValueTests.csproj", "{8C356BF6-2D1E-4E69-9AE4-9B2434454192}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "FutureValue", "src\FutureValue\FutureValue.xproj", "{A99522FA-C108-435F-807B-8BF4314DBE27}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "FutureValueFE", "src\FutureValueFE\FutureValueFE.xproj", "{1963D282-87AA-4D48-9215-3BB5B4F5CD73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +44,18 @@ Global
 		{A1B7806D-E68A-49BD-9411-4CE61DE5D043}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1B7806D-E68A-49BD-9411-4CE61DE5D043}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1B7806D-E68A-49BD-9411-4CE61DE5D043}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C356BF6-2D1E-4E69-9AE4-9B2434454192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C356BF6-2D1E-4E69-9AE4-9B2434454192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C356BF6-2D1E-4E69-9AE4-9B2434454192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C356BF6-2D1E-4E69-9AE4-9B2434454192}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A99522FA-C108-435F-807B-8BF4314DBE27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A99522FA-C108-435F-807B-8BF4314DBE27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A99522FA-C108-435F-807B-8BF4314DBE27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A99522FA-C108-435F-807B-8BF4314DBE27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1963D282-87AA-4D48-9215-3BB5B4F5CD73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1963D282-87AA-4D48-9215-3BB5B4F5CD73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1963D282-87AA-4D48-9215-3BB5B4F5CD73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1963D282-87AA-4D48-9215-3BB5B4F5CD73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,5 +64,8 @@ Global
 		{A1B7806D-E68A-49BD-9411-4CE61DE5D043} = {F4C7FA72-6E58-47DA-B3D0-BAB751A6D5A0}
 		{1C81C01A-DFDC-40F5-87B4-9DC18178D81C} = {771224B2-EF54-4299-84BE-960943E8B22F}
 		{E4083175-400B-4B0E-9FF3-6681DA89B5AF} = {771224B2-EF54-4299-84BE-960943E8B22F}
+		{8C356BF6-2D1E-4E69-9AE4-9B2434454192} = {F4C7FA72-6E58-47DA-B3D0-BAB751A6D5A0}
+		{A99522FA-C108-435F-807B-8BF4314DBE27} = {F4C7FA72-6E58-47DA-B3D0-BAB751A6D5A0}
+		{1963D282-87AA-4D48-9215-3BB5B4F5CD73} = {F4C7FA72-6E58-47DA-B3D0-BAB751A6D5A0}
 	EndGlobalSection
 EndGlobal
