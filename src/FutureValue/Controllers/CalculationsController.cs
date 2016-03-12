@@ -13,7 +13,8 @@ namespace FutureValue.Controllers
         [HttpGet]
         public double CalculateFutureValue(double principal,double rate, double years, double compounds)
         {
-            return Math.Pow(principal*(1+rate/years),years*compounds);
+            //http://localhost:64389/api/calculations/?principal=5000&rate=0.05&years=10&compounds=12
+            return Math.Round(principal*Math.Pow((1+rate/compounds),years*compounds),2);
         }        
     }
 }
